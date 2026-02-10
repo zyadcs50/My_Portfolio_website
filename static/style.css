@@ -216,30 +216,32 @@ h2 {
 }
 .skills .skill-item .progress-bar {
     width: 100%;
-    height: 20px;
+    height: 22px;
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     margin-top: 10px;
     position: relative;
 }
 .skills .skill-item .progress-bar .progress1 {
-      width: 90%;
+      width: 50%;
       background: linear-gradient(to right, #4caf50, #81c784);
-      height: 25px;
+      height: 22px;
       text-align: right;
       padding-right: 10px;
       color: white;
       font-weight: bold;
+      font-size: 20px;
+      padding-bottom: 3px;
       line-height: 25px;
       border-radius: 20px 0 0 20px;
       transition: width 1s ease-in-out;
       animation: loadSkill 2s ease-out forwards;
 }
 .skills .skill-item .progress-bar .progress2 {
-      width: 95%;
+      width: 50%;
       background: linear-gradient(to right, #4caf50, #81c784);
-      height: 25px;
+      height: 22px;
       text-align: right;
       padding-right: 10px;
       color: white;
@@ -250,9 +252,9 @@ h2 {
       animation: loadSkill2 2s ease-out forwards;
 }
 .skills .skill-item .progress-bar .progress3 {
-      width: 70%;
+      width: 50%;
       background: linear-gradient(to right, #4caf50, #81c784);
-      height: 25px;
+      height: 22px;
       text-align: right;
       padding-right: 10px;
       color: white;
@@ -263,22 +265,22 @@ h2 {
       animation: loadSkill3 2s ease-out forwards;
 }
 .skills .skill-item .progress-bar .progress4 {
-      width: 85%;
+      width: 50%;
       background: linear-gradient(to right, #4caf50, #81c784);
-      height: 25px;
+      height: 22px;
       text-align: right;
-      padding-right: 10px;
+      padding-right: 30px;
       color: white;
       font-weight: bold;
       line-height: 25px;
       border-radius: 20px 0 0 20px;
       transition: width 1s ease-in-out;
-      animation: loadSkill3 2s ease-out forwards;
+      animation: loadSkill4 2s ease-out forwards;
 }
 .skills .skill-item .progress-bar .progress5 {
-      width: 75%;
+      width: 50%;
       background: linear-gradient(to right, #4caf50, #81c784);
-      height: 25px;
+      height: 22px;
       text-align: right;
       padding-right: 10px;
       color: white;
@@ -304,6 +306,10 @@ h2 {
 @keyframes loadSkill3 {
   from { width: 0; }
   to { width: 70%; }
+}
+@keyframes loadSkill4 {
+  from { width: 0; }
+  to { width: 75%; }
 }
 
 
@@ -344,14 +350,15 @@ h2 {
 
 /* Submit Button */
 .contact-content button {
-  padding: 12px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 11px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: -12px 111px;
 }
 
 .contact-content button:hover {

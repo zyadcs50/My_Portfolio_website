@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zyad Ahmed</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href= "../static/style.css">
+    <link rel="icon" href="../img/new_icon.png">
 
 </head>
 <body>
@@ -32,13 +33,13 @@
                     <a href="https://www.facebook.com/" target="_blank">
                         <i class="fa-brands fa-facebook"></i> 
                     </a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                    <a href="https://www.linkedin.com/in/zyad-ahmed-470297320/" target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
-                    <a href="www.instgram.com" target="_blank">
+                    <!-- <a href="www.instgram.com" target="_blank">
                         <i class="fa-brands fa-instagram"></i> 
-                    </a>
-                    <a href="" target="_blank">
+                    </a> -->
+                    <a href="https://github.com/zyadcs50" target="_blank">
                         <i class="fa-brands fa-github"></i>
                     </a>
                     <br>
@@ -50,7 +51,7 @@
                 
             </div>
             <div class="header-image">
-                <img src="/img/port.jpg" alt="Zyad Ahmed">
+                <img src="../img/my_img.png" alt="Zyad Ahmed">
         </div>
      </header>
      <div class="about" id="about">
@@ -59,7 +60,7 @@
             <p class="par">Computer Science student at Cairo University, passionate about tech and eager to learn. Currently building my skills in Python and C++, with a strong interest in software development and AI. Always looking for opportunities to grow, connect, and gain real-world experience.</p>
         </div>
         <div class="about-image">
-            <img src="../img/port.jpg" alt="Zyad Ahmed">
+            <!-- <img src="../img/port.jpg" alt="Zyad Ahmed"> -->
         </div>
      </div>
      <div class="skills" id="skills">
@@ -103,17 +104,78 @@
             <form id="contact-form" action="" novalidate>
                 <input id="name" name="name" type="text" placeholder="Your Name" required>
                 <input id="email" name="email" type="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="text" id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></input>
                 <div id="contact-feedback" aria-live="polite" class="contact-feedback"></div>
                 <button id="contact-submit" type="submit">Send Message</button>
             </form>
+
         </div>
      </div>
      <div class="scroll">
         <a href="#home" class="up">↑</a>
      </div>
 
+     <div id="congrats" style="
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        ">
+        🎉 Thanks For Contacting Me
+        </div>
+
     
+        
+
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+    emailjs.init("HeM8Wwaj8T2v-dwm5"); 
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('contact-form');
+        const feedback = document.getElementById('contact-feedback');
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const formData = {
+            name: form.name.value,
+            sender_email: form.email.value, 
+            message: form.message.value,
+            time: new Date().toLocaleString()
+        };
+
+        emailjs.send('service_ugdav8x', 'template_3az6fjo', formData)
+            .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+
+            document.getElementById("congrats").style.display = "block";
+            
+            setTimeout(() => {
+                document.getElementById("congrats").style.display = "none";
+            }, 5000);
+
+            form.reset();
+            })
+            .catch(function(error) {
+            console.error('EmailJS Error:', error);
+            feedback.textContent = "Oops! Something went wrong ❌";
+            feedback.style.color = "red";
+            });
+        });
+    });
+    </script>
+
 </body>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </html>
