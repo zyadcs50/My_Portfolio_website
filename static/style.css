@@ -444,6 +444,8 @@ section h2 {
     transition: border-color 0.3s ease;
 }
 
+
+
 .contact-content textarea {
     padding: 15px;
     border: 1px solid #ccc;
@@ -455,9 +457,20 @@ section h2 {
 
 }
 
-.contact-content input:focus {
+
+::placeholder {
+    color: #999;
+}
+
+.contact-content input:focus,
+.contact-content textarea:focus {
     outline: none;
     box-shadow: 0 0 0px 2px var(--secondary-color);
+}
+
+.contact-content input:focus::placeholder,
+.contact-content textarea:focus::placeholder {
+    color: var(--secondary-color);
 }
 
 /* Submit Button */
