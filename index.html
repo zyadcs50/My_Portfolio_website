@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyad Ahmed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../img/new_icon.png">
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header id="home">
+        <div class="navbar">
+            <button class="menu">Open</button>
+            <nav>
+                <a href="#home" id="logo" class="logo">Zyad Ahmed</a>
+                <ul style="display: none;">
+                    <li class="first-ele"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li class="last-ele"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <div class="content-text">
+                <span class="text-primary">Hi There , I'm </span>
+                <h1>Zyad Ahmed</h1>
+                <p class="title">Front End Web Dev</p>
+
+                <div class="social">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/zyad-ahmed-470297320/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <!-- <a href="www.instgram.com" target="_blank">
+                        <i class="fa-brands fa-instagram"></i> 
+                    </a> -->
+                    <a href="https://github.com/zyadcs50" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <br>
+                    <br>
+                </div>
+
+
+                <!-- Header Section end -->
+                <a href="#about" class="btn-primary" for="about-icon"> About Me <i class="fa-solid fa-circle-arrow-down"
+                        id="about-icon"></i></a>
+
+
+            </div>
+            <div class="header-image">
+                <img src="../img/my_img.png" alt="Zyad Ahmed">
+            </div>
+    </header>
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p class="par">Computer Science student at Cairo University, passionate about tech and eager to learn.
+                Currently building my skills in Python and C++, with a strong interest in software development and AI.
+                Always looking for opportunities to grow, connect, and gain real-world experience.</p>
+        </div>
+        <!-- <div class="about-image">
+            <img src="../img/port.jpg" alt="Zyad Ahmed"> 
+        </div> -->
+
+    </section>
+    <section class="skills" id="skills">
+        <div class="skill-content">
+            <h2>My Skills</h2>
+            <div class="skill-item">
+                <h3>Python</h3>
+                <div class="progress-bar">
+                    <div class="progress4">85%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>C++</h3>
+                <div class="progress-bar">
+                    <div class="progress5">75%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress1">95%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress2">80%</div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress3">70%</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <form id="contact-form" action="" novalidate>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea type="text" id="message" name="message" placeholder="Your Message" required></textarea>
+                <div id="contact-feedback" aria-live="polite" class="contact-feedback"></div>
+                <button id="contact-submit" type="submit">Send Message</button>
+            </form>
+
+        </div>
+    </section>
+
+    <div class="scroll">
+        <a href="#home" class="up">↑</a>
+    </div>
+
+    <div id="congrats" style="
+            display: none;
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4caf50;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        ">
+        🎉 Thanks For Contacting Me
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+
+        let mylist = document.querySelector("ul");
+        let mybtn = document.querySelector(".menu");
+        function display_menu() {
+            if(mylist.style.display === "none"){
+                mylist.style.display = "flex";
+                mybtn.innerHTML = "Close"
+            }
+            else{
+                mybtn.innerHTML = "Open"
+                mylist.style.display = "none";
+            }
+        }
+
+        mybtn.onclick = display_menu;
+        emailjs.init("HeM8Wwaj8T2v-dwm5");
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById('contact-form');
+            const feedback = document.getElementById('contact-feedback');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const formData = {
+                    name: form.name.value,
+                    sender_email: form.email.value,
+                    message: form.message.value,
+                    time: new Date().toLocaleString()
+                };
+
+                emailjs.send('service_ugdav8x', 'template_3az6fjo', formData)
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+
+                        document.getElementById("congrats").style.display = "block";
+
+                        setTimeout(() => {
+                            document.getElementById("congrats").style.display = "none";
+                        }, 5000);
+
+                        form.reset();
+                    })
+                    .catch(function (error) {
+                        console.error('EmailJS Error:', error);
+                        feedback.textContent = "Oops! Something went wrong ❌";
+                        feedback.style.color = "red";
+                    });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
