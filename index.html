@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../img/new_icon.png">
 
 </head>
@@ -17,9 +17,10 @@
     <!-- Header Section -->
     <header id="home">
         <div class="navbar">
+            <button class="menu">Open</button>
             <nav>
                 <a href="#home" id="logo" class="logo">Zyad Ahmed</a>
-                <ul>
+                <ul style="display: none;">
                     <li class="first-ele"><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#service">Service</a></li>
@@ -152,6 +153,21 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
+
+        let mylist = document.querySelector("ul");
+        let mybtn = document.querySelector(".menu");
+        function display_menu() {
+            if(mylist.style.display === "none"){
+                mylist.style.display = "flex";
+                mybtn.innerHTML = "Close"
+            }
+            else{
+                mybtn.innerHTML = "Open"
+                mylist.style.display = "none";
+            }
+        }
+
+        mybtn.onclick = display_menu;
         emailjs.init("HeM8Wwaj8T2v-dwm5");
 
         document.addEventListener("DOMContentLoaded", function () {

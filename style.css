@@ -28,7 +28,7 @@ h2 {
 
 ul {
     list-style: none;
-    border: 3px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 13px;
     min-height: 40px;
     position: relative;
@@ -113,7 +113,7 @@ header .navbar {
     z-index: 1000;
 }
 
-#home #logo {
+#home #logo , .menu {
     color: var(--primary-color);
     font-size: 24px;
     font-weight: 600;
