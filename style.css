@@ -711,24 +711,7 @@ header .navbar nav ul{
 
 
 
-header .navbar nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  max-width: 100%;
-  padding-right: 10px;
-}
 
-#home .navbar #logo {
-  margin-left: 0;
-}
-
-header .navbar nav ul {
-  margin-left: auto;
-  
-}
 
 
 
