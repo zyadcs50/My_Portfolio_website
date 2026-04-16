@@ -77,6 +77,8 @@ h3 {
   line-height: 1.15;
 }
 
+
+
 section,
 .projects,
 .contact {
@@ -232,20 +234,25 @@ header::after {
 
 .content-text h1 {
   margin-bottom: 0.5rem;
-  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-size: 6rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: 3px;
   color: var(--text);
   line-height: 1.05;
+}
+
+
+.second-name{
+  color:#00e5ff;
 }
 
 .title {
   margin-bottom: 2rem;
   font-size: 1.05rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent);
 }
 
 .social {
