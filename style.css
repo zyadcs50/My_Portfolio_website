@@ -472,10 +472,10 @@ section h2::after {
   width: 80%;
 }
 .progress3 {
-  width: 70%;
+  width: 90%;
 }
 .progress4 {
-  width: 85%;
+  width: 60%;
 }
 .progress5 {
   width: 75%;
@@ -504,7 +504,7 @@ section h2::after {
   content: "80%";
 }
 .progress3::after {
-  content: "70%";
+  content: "90%";
 }
 .progress4::after {
   content: "85%";
