@@ -707,3 +707,9 @@ section h2::after {
 
  
 }
+
+.anchors-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
